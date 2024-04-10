@@ -1,0 +1,6 @@
+module Pods_TMDB {
+  umbrella header "Pods-TMDB-umbrella.h"
+
+  export *
+  module * { export * }
+}

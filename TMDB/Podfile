@@ -1,0 +1,12 @@
+target 'TMDB' do
+
+  pod 'Alamofire'
+
+  target 'TMDBTests' do
+    inherit! :search_paths
+  end
+
+  target 'TMDBUITests' do
+  end
+
+end
