@@ -1,6 +1,9 @@
 target 'TMDB' do
 
   pod 'Alamofire'
+  pod 'IQKeyboardManager'
+  pod 'SkeletonView'
+  pod 'SwifterSwift'
 
   target 'TMDBTests' do
     inherit! :search_paths

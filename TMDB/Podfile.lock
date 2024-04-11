@@ -1,16 +1,60 @@
 PODS:
   - Alamofire (5.9.1)
+  - IQKeyboardManager (6.5.18)
+  - SkeletonView (1.30.4)
+  - SwifterSwift (6.2.0):
+    - SwifterSwift/AppKit (= 6.2.0)
+    - SwifterSwift/Combine (= 6.2.0)
+    - SwifterSwift/CoreAnimation (= 6.2.0)
+    - SwifterSwift/CoreGraphics (= 6.2.0)
+    - SwifterSwift/CoreLocation (= 6.2.0)
+    - SwifterSwift/CryptoKit (= 6.2.0)
+    - SwifterSwift/Dispatch (= 6.2.0)
+    - SwifterSwift/Foundation (= 6.2.0)
+    - SwifterSwift/HealthKit (= 6.2.0)
+    - SwifterSwift/MapKit (= 6.2.0)
+    - SwifterSwift/SceneKit (= 6.2.0)
+    - SwifterSwift/SpriteKit (= 6.2.0)
+    - SwifterSwift/StoreKit (= 6.2.0)
+    - SwifterSwift/SwiftStdlib (= 6.2.0)
+    - SwifterSwift/UIKit (= 6.2.0)
+    - SwifterSwift/WebKit (= 6.2.0)
+  - SwifterSwift/AppKit (6.2.0)
+  - SwifterSwift/Combine (6.2.0)
+  - SwifterSwift/CoreAnimation (6.2.0)
+  - SwifterSwift/CoreGraphics (6.2.0)
+  - SwifterSwift/CoreLocation (6.2.0)
+  - SwifterSwift/CryptoKit (6.2.0)
+  - SwifterSwift/Dispatch (6.2.0)
+  - SwifterSwift/Foundation (6.2.0)
+  - SwifterSwift/HealthKit (6.2.0)
+  - SwifterSwift/MapKit (6.2.0)
+  - SwifterSwift/SceneKit (6.2.0)
+  - SwifterSwift/SpriteKit (6.2.0)
+  - SwifterSwift/StoreKit (6.2.0)
+  - SwifterSwift/SwiftStdlib (6.2.0)
+  - SwifterSwift/UIKit (6.2.0)
+  - SwifterSwift/WebKit (6.2.0)
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManager
+  - SkeletonView
+  - SwifterSwift
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - IQKeyboardManager
+    - SkeletonView
+    - SwifterSwift
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  IQKeyboardManager: 67f92bb29b650c094c40bd11c0545b47bdd25c5b
+  SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
+  SwifterSwift: dd00873fb09cde19da88bdb2878f9fe70fe27b0f
 
-PODFILE CHECKSUM: f592df7e770553e2f4c7f5e482a4ba5e622e9b92
+PODFILE CHECKSUM: 95523ff2033ccfd7277f361f60f023c6c4331606
 
 COCOAPODS: 1.15.2

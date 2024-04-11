@@ -18,6 +18,9 @@
 		63407A7E2BC6A8AF000CA505 /* TMDBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63407A7D2BC6A8AF000CA505 /* TMDBUITests.swift */; };
 		63407A802BC6A8AF000CA505 /* TMDBUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63407A7F2BC6A8AF000CA505 /* TMDBUITestsLaunchTests.swift */; };
 		63407A8D2BC6B0B2000CA505 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 63407A8C2BC6B0B2000CA505 /* Podfile */; };
+		63B375292BC8496E005AAEC3 /* RequestsStaticClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B375282BC8496E005AAEC3 /* RequestsStaticClass.swift */; };
+		63B3752C2BC84B55005AAEC3 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3752A2BC84B55005AAEC3 /* Genres.swift */; };
+		63B3752D2BC84B55005AAEC3 /* GenresListStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3752B2BC84B55005AAEC3 /* GenresListStruct.swift */; };
 		71C52F6C2390C0AA386779D6 /* libPods-TMDB-TMDBUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00BB0DC7733F5E10DBE81C12 /* libPods-TMDB-TMDBUITests.a */; };
 		A839814F95EAB62C56100996 /* libPods-TMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A89234F5CB2EE78D1F95F4A /* libPods-TMDB.a */; };
 /* End PBXBuildFile section */
@@ -56,7 +59,10 @@
 		63407A792BC6A8AF000CA505 /* TMDBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMDBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63407A7D2BC6A8AF000CA505 /* TMDBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBUITests.swift; sourceTree = "<group>"; };
 		63407A7F2BC6A8AF000CA505 /* TMDBUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		63407A8C2BC6B0B2000CA505 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		63407A8C2BC6B0B2000CA505 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		63B375282BC8496E005AAEC3 /* RequestsStaticClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsStaticClass.swift; sourceTree = "<group>"; };
+		63B3752A2BC84B55005AAEC3 /* Genres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
+		63B3752B2BC84B55005AAEC3 /* GenresListStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenresListStruct.swift; sourceTree = "<group>"; };
 		9B7ABEF1EC54C831E1B69E0F /* Pods-TMDBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDBTests.debug.xcconfig"; path = "Target Support Files/Pods-TMDBTests/Pods-TMDBTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A579AE600F5E82AC3065F6D6 /* Pods-TMDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDB.debug.xcconfig"; path = "Target Support Files/Pods-TMDB/Pods-TMDB.debug.xcconfig"; sourceTree = "<group>"; };
 		AD842C937E09376FCEC118C4 /* Pods-TMDBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDBTests.release.xcconfig"; path = "Target Support Files/Pods-TMDBTests/Pods-TMDBTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +124,7 @@
 		63407A5B2BC6A8AE000CA505 /* TMDB */ = {
 			isa = PBXGroup;
 			children = (
+				63B375262BC8492C005AAEC3 /* Modules */,
 				63407A8C2BC6B0B2000CA505 /* Podfile */,
 				63407A5C2BC6A8AE000CA505 /* AppDelegate.swift */,
 				63407A5E2BC6A8AE000CA505 /* SceneDelegate.swift */,
@@ -147,6 +154,32 @@
 			path = TMDBUITests;
 			sourceTree = "<group>";
 		};
+		63B375262BC8492C005AAEC3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				63B375272BC84952005AAEC3 /* Structs */,
+				63B375282BC8496E005AAEC3 /* RequestsStaticClass.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		63B375272BC84952005AAEC3 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				63B3752E2BC84BAD005AAEC3 /* GenresListStruct */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		63B3752E2BC84BAD005AAEC3 /* GenresListStruct */ = {
+			isa = PBXGroup;
+			children = (
+				63B3752A2BC84B55005AAEC3 /* Genres.swift */,
+				63B3752B2BC84B55005AAEC3 /* GenresListStruct.swift */,
+			);
+			path = GenresListStruct;
+			sourceTree = "<group>";
+		};
 		8119374F9866DBAD9F991578 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +200,6 @@
 				9B7ABEF1EC54C831E1B69E0F /* Pods-TMDBTests.debug.xcconfig */,
 				AD842C937E09376FCEC118C4 /* Pods-TMDBTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -412,8 +444,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				63407A612BC6A8AE000CA505 /* ViewController.swift in Sources */,
+				63B3752C2BC84B55005AAEC3 /* Genres.swift in Sources */,
 				63407A5D2BC6A8AE000CA505 /* AppDelegate.swift in Sources */,
+				63B375292BC8496E005AAEC3 /* RequestsStaticClass.swift in Sources */,
 				63407A5F2BC6A8AE000CA505 /* SceneDelegate.swift in Sources */,
+				63B3752D2BC84B55005AAEC3 /* GenresListStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +631,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TMDB/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
@@ -626,6 +662,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TMDB/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
