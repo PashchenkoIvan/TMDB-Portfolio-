@@ -16,18 +16,25 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var buttonStyle: UIButton!
     
+    @IBOutlet weak var movieTextLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        movieTextLabel.backgroundColor = UIColor.clear
+        movieTextLabel.layer.borderColor = UIColor.white.cgColor
+        movieTextLabel.layer.borderWidth = 3
         
         buttonStyle.layer.cornerRadius = 10
         
         let gradient = CAGradientLayer()
         gradient.frame = ImageView.bounds
-        gradient.colors = [UIColor.systemPink.cgColor, UIColor.systemPink.cgColor, UIColor.clear.cgColor]
-        gradient.locations = [0.0, 0.45, 1.0]
+        gradient.colors = [UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor]
+        gradient.locations = [0.0, 0.1, 0.5, 0.9, 1.0]
         ImageView.layer.insertSublayer(gradient, at: 0)
         
-        let url = URL(string: "https://picsum.photos/393/852/?blur")
+//        let url = URL(string: "https://picsum.photos/393/852/?blur")
+        let url = URL(string: "https://i.pinimg.com/564x/20/a4/23/20a4239750efa6d888960faafd1e8708.jpg")
         ImageView.kf.setImage(with: url)
         
     }

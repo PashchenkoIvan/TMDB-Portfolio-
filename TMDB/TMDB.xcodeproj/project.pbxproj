@@ -14,6 +14,7 @@
 		630B50162BCEC3FE0049F0AF /* Gravatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B50122BCEC3FE0049F0AF /* Gravatar.swift */; };
 		630B50192BCEC56A0049F0AF /* RequestTokenStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B50182BCEC56A0049F0AF /* RequestTokenStruct.swift */; };
 		630B501D2BCEC81B0049F0AF /* SessionIdStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B501C2BCEC81B0049F0AF /* SessionIdStruct.swift */; };
+		630B50232BCFD81C0049F0AF /* ReturnUserDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B50222BCFD81C0049F0AF /* ReturnUserDataStruct.swift */; };
 		63407A5D2BC6A8AE000CA505 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63407A5C2BC6A8AE000CA505 /* AppDelegate.swift */; };
 		63407A5F2BC6A8AE000CA505 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63407A5E2BC6A8AE000CA505 /* SceneDelegate.swift */; };
 		63407A612BC6A8AE000CA505 /* GeneralPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63407A602BC6A8AE000CA505 /* GeneralPageViewController.swift */; };
@@ -30,7 +31,6 @@
 		63430FDA2BCAB8BF00537367 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63430FD82BCAB8BF00537367 /* Movie.swift */; };
 		63430FDB2BCAB8C000537367 /* MovieListResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63430FD92BCAB8BF00537367 /* MovieListResponce.swift */; };
 		63430FDE2BCB022800537367 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63430FDD2BCB022800537367 /* LoginViewController.swift */; };
-		63430FE02BCB023800537367 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63430FDF2BCB023800537367 /* RegisterViewController.swift */; };
 		63B375292BC8496E005AAEC3 /* RequestsStaticClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B375282BC8496E005AAEC3 /* RequestsStaticClass.swift */; };
 		63B3752C2BC84B55005AAEC3 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3752A2BC84B55005AAEC3 /* Genres.swift */; };
 		63B3752D2BC84B55005AAEC3 /* GenresListStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3752B2BC84B55005AAEC3 /* GenresListStruct.swift */; };
@@ -65,6 +65,7 @@
 		630B50122BCEC3FE0049F0AF /* Gravatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gravatar.swift; sourceTree = "<group>"; };
 		630B50182BCEC56A0049F0AF /* RequestTokenStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestTokenStruct.swift; sourceTree = "<group>"; };
 		630B501C2BCEC81B0049F0AF /* SessionIdStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionIdStruct.swift; sourceTree = "<group>"; };
+		630B50222BCFD81C0049F0AF /* ReturnUserDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnUserDataStruct.swift; sourceTree = "<group>"; };
 		63407A592BC6A8AE000CA505 /* TMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63407A5C2BC6A8AE000CA505 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63407A5E2BC6A8AE000CA505 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		63430FD82BCAB8BF00537367 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		63430FD92BCAB8BF00537367 /* MovieListResponce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListResponce.swift; sourceTree = "<group>"; };
 		63430FDD2BCB022800537367 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		63430FDF2BCB023800537367 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		63B375282BC8496E005AAEC3 /* RequestsStaticClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsStaticClass.swift; sourceTree = "<group>"; };
 		63B3752A2BC84B55005AAEC3 /* Genres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 		63B3752B2BC84B55005AAEC3 /* GenresListStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenresListStruct.swift; sourceTree = "<group>"; };
@@ -132,6 +132,7 @@
 				630B50122BCEC3FE0049F0AF /* Gravatar.swift */,
 				630B50112BCEC3FE0049F0AF /* UserDataStruct.swift */,
 				630B50102BCEC3FE0049F0AF /* Tmdb.swift */,
+				630B50222BCFD81C0049F0AF /* ReturnUserDataStruct.swift */,
 			);
 			path = UserDataStruct;
 			sourceTree = "<group>";
@@ -214,7 +215,6 @@
 				63430FD42BC9A8D100537367 /* SearchViewController.swift */,
 				63430FD62BC9A8E500537367 /* AccountViewController.swift */,
 				63430FDD2BCB022800537367 /* LoginViewController.swift */,
-				63430FDF2BCB023800537367 /* RegisterViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -529,6 +529,7 @@
 				630B50132BCEC3FE0049F0AF /* Avatar.swift in Sources */,
 				630B50152BCEC3FE0049F0AF /* UserDataStruct.swift in Sources */,
 				63407A5D2BC6A8AE000CA505 /* AppDelegate.swift in Sources */,
+				630B50232BCFD81C0049F0AF /* ReturnUserDataStruct.swift in Sources */,
 				63430FDB2BCAB8C000537367 /* MovieListResponce.swift in Sources */,
 				630B50142BCEC3FE0049F0AF /* Tmdb.swift in Sources */,
 				63430FDA2BCAB8BF00537367 /* Movie.swift in Sources */,
@@ -536,7 +537,6 @@
 				630B50192BCEC56A0049F0AF /* RequestTokenStruct.swift in Sources */,
 				63B375292BC8496E005AAEC3 /* RequestsStaticClass.swift in Sources */,
 				63407A5F2BC6A8AE000CA505 /* SceneDelegate.swift in Sources */,
-				63430FE02BCB023800537367 /* RegisterViewController.swift in Sources */,
 				63B3752D2BC84B55005AAEC3 /* GenresListStruct.swift in Sources */,
 				630B501D2BCEC81B0049F0AF /* SessionIdStruct.swift in Sources */,
 				630B50162BCEC3FE0049F0AF /* Gravatar.swift in Sources */,

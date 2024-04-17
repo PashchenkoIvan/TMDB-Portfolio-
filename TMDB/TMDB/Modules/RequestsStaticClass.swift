@@ -140,7 +140,7 @@ class RequestsStaticClass {
             }
     }
     
-    private static func getUserInfo(session_id: String, completion: @escaping (Result<UserDataStruct, Error>) -> ()) {
+    private static func getUserInfo(session_id: String, completion: @escaping (Result<ReturnUserDataStruct, Error>) -> ()) {
         let url = "https://api.themoviedb.org/3/account?api_key=\(apiKey)&session_id=\(session_id)"
         
         AF.request(url)
@@ -156,7 +156,7 @@ class RequestsStaticClass {
                     let decoder = JSONDecoder()
                     
                     do {
-                        let userData = try decoder.decode(UserDataStruct.self, from: jsonData)
+                        let userData = ReturnUserDataStruct(session_id: session_id, user_data: try decoder.decode(UserDataStruct.self, from: jsonData))
 //                        print("User data: \(userData)")
                         completion(.success(userData))
                     } catch {
@@ -168,7 +168,7 @@ class RequestsStaticClass {
             }
     }
     
-    static func loginUser(username: String, password: String, completion: @escaping (Result<UserDataStruct, Error>) -> ()) {
+    static func loginUser(username: String, password: String, completion: @escaping (Result<ReturnUserDataStruct, Error>) -> ()) {
         getRequestTokenUrl { getingRequestTokenResponce in
             switch getingRequestTokenResponce {
                 
