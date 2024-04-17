@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-TMDB-TMDBUITests/Pods-TMDB-TMDBUITests-resources.sh
 ${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManager/IQKeyboardManager.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/SwifterSwift/SwifterSwift_Privacy.bundle

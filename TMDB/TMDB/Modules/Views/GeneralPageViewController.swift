@@ -6,14 +6,12 @@
 //
 
 import UIKit
-import Alamofire
 
-class ViewController: UIViewController {
+class GeneralPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
 }
 

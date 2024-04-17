@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.9.1)
   - IQKeyboardManager (6.5.18)
+  - Kingfisher (7.11.0)
   - SkeletonView (1.30.4)
   - SwifterSwift (6.2.0):
     - SwifterSwift/AppKit (= 6.2.0)
@@ -39,6 +40,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - IQKeyboardManager
+  - Kingfisher
   - SkeletonView
   - SwifterSwift
 
@@ -46,15 +48,17 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - IQKeyboardManager
+    - Kingfisher
     - SkeletonView
     - SwifterSwift
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   IQKeyboardManager: 67f92bb29b650c094c40bd11c0545b47bdd25c5b
+  Kingfisher: b9c985d864d43515f404f1ef4a8ce7d802ace3ac
   SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
   SwifterSwift: dd00873fb09cde19da88bdb2878f9fe70fe27b0f
 
-PODFILE CHECKSUM: 95523ff2033ccfd7277f361f60f023c6c4331606
+PODFILE CHECKSUM: 15a70960bef253e75a4d64bfa7bcdd66a9f8b3d1
 
 COCOAPODS: 1.15.2

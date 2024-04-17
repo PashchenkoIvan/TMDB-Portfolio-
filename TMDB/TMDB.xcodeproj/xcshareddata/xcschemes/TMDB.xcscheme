@@ -76,8 +76,13 @@
       </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "GenresList"
-            value = "https://api.themoviedb.org/3/genre/movie/list?language=en&amp;api_key=dfd88fd1f6cf5c2840a006a8ed225151"
+            key = "api_key"
+            value = "dfd88fd1f6cf5c2840a006a8ed225151"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "CG_NUMERICS_SHOW_BACKTRACE"
+            value = ""
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
