@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--General-->
+        <!--Genres-->
         <scene sceneID="Ngg-CA-bSl">
             <objects>
                 <viewController storyboardIdentifier="GeneralPageViewController" id="zh4-ml-I6R" customClass="GeneralPageViewController" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,16 +19,16 @@
                         <viewLayoutGuide key="safeArea" id="6D1-UL-rt1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="General" image="house.fill" catalog="system" id="aKn-9R-iPc"/>
+                    <tabBarItem key="tabBarItem" title="Genres" image="books.vertical.fill" catalog="system" id="aKn-9R-iPc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X7n-Cx-5xk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-193.12977099236642" y="-44.366197183098592"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="zNB-wz-RAX">
             <objects>
-                <tabBarController id="NmR-gl-a3y" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="NmR-gl-a3y" customClass="MainTabBarController" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XDv-cM-gWj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -38,12 +38,11 @@
                         <segue destination="zh4-ml-I6R" kind="relationship" relationship="viewControllers" id="4Ng-D6-iZT"/>
                         <segue destination="EQP-3d-K2N" kind="relationship" relationship="viewControllers" id="4bc-je-hBQ"/>
                         <segue destination="mVu-4A-kkS" kind="relationship" relationship="viewControllers" id="YTx-4i-7Ge"/>
-                        <segue destination="UNT-kn-GiT" kind="relationship" relationship="viewControllers" id="COv-9Z-El3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KtM-8K-JxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1404" y="1074"/>
+            <point key="canvasLocation" x="-1213" y="718"/>
         </scene>
         <!--Favorites View Controller-->
         <scene sceneID="Du4-bk-oxp">
@@ -195,28 +194,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6w-pw-7iP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2306.1068702290077" y="1919.7183098591549"/>
-        </scene>
-        <!--Account-->
-        <scene sceneID="Mob-uA-b83">
-            <objects>
-                <viewController id="UNT-kn-GiT" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5Al-8f-dwa">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="GqO-Ja-lYC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="person.crop.circle.fill" catalog="system" id="J1b-IY-6Az"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fIE-RC-Yw9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-193" y="2196"/>
+            <point key="canvasLocation" x="-2201" y="718"/>
         </scene>
     </scenes>
     <resources>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="books.vertical.fill" catalog="system" width="128" height="110"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

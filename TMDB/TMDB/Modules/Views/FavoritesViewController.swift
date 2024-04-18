@@ -8,55 +8,62 @@
 import UIKit
 
 class FavoritesViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var genresList: [Genres] = []
-    var movieList: [Movie] = []
+    var userData: ReturnUserDataStruct
+    
+    init(userData: ReturnUserDataStruct) {
+        self.userData = userData
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        if let savedData = UserDefaults.standard.object(forKey: "userData") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedData = try? decoder.decode(ReturnUserDataStruct.self, from: savedData) {
+                self.userData = loadedData
+            } else {
+                fatalError("Unable to decode userData")
+            }
+        } else {
+            fatalError("No userData found in UserDefaults")
+        }
+        super.init(coder: coder)
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        RequestsStaticClass.get { result in
-//            switch result {
-//            case .success(let response):
-//                response.genres!.forEach({ genre in
-//                    self.genresList.append(genre)
-//                })
-//                self.tableView.reloadData()
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
+        tableView.dataSource = self
         
-        RequestsStaticClass.getMovieList { result in
-            switch result {
-            case .success(let responce):
-                responce.results!.forEach({movie in
-                    self.movieList.append(movie)
-                })
-                self.tableView.reloadData()
-            case .failure(let error):
-                print(error)
+        if let savedData = UserDefaults.standard.object(forKey: "userData") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedData = try? decoder.decode(ReturnUserDataStruct.self, from: savedData) {
+                self.userData = loadedData
             }
         }
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print(userData)
+        
+    }
+    
 }
 
 extension FavoritesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(movieList.count)
-        return movieList.count
+        return 10
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-//        cell.backgroundColor = .black
-//        cell.textLabel?.backgroundColor = .black
-//        cell.textLabel?.textColor = .white
         cell.selectionStyle = .none
-        cell.textLabel?.text = movieList[indexPath.row].title
+//        cell.textLabel?.text = movieList[indexPath.row].title
         return cell
     }
 }
