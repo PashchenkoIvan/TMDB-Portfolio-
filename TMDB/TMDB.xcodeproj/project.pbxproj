@@ -16,9 +16,12 @@
 		630B501D2BCEC81B0049F0AF /* SessionIdStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B501C2BCEC81B0049F0AF /* SessionIdStruct.swift */; };
 		630B50232BCFD81C0049F0AF /* ReturnUserDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B50222BCFD81C0049F0AF /* ReturnUserDataStruct.swift */; };
 		630B50252BD108160049F0AF /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B50242BD108160049F0AF /* MainTabBarController.swift */; };
+		630B502A2BD12C240049F0AF /* FavoritesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B50282BD12C240049F0AF /* FavoritesStruct.swift */; };
+		630B502C2BD2D9C90049F0AF /* RequestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B502B2BD2D9C90049F0AF /* RequestClass.swift */; };
+		630B502F2BD2DE710049F0AF /* RequestsParamsStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B502E2BD2DE710049F0AF /* RequestsParamsStructs.swift */; };
 		63407A5D2BC6A8AE000CA505 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63407A5C2BC6A8AE000CA505 /* AppDelegate.swift */; };
 		63407A5F2BC6A8AE000CA505 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63407A5E2BC6A8AE000CA505 /* SceneDelegate.swift */; };
-		63407A612BC6A8AE000CA505 /* GeneralPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63407A602BC6A8AE000CA505 /* GeneralPageViewController.swift */; };
+		63407A612BC6A8AE000CA505 /* GenresPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63407A602BC6A8AE000CA505 /* GenresPageViewController.swift */; };
 		63407A642BC6A8AE000CA505 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 63407A632BC6A8AE000CA505 /* Base */; };
 		63407A662BC6A8AF000CA505 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63407A652BC6A8AF000CA505 /* Assets.xcassets */; };
 		63407A692BC6A8AF000CA505 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 63407A682BC6A8AF000CA505 /* Base */; };
@@ -68,10 +71,13 @@
 		630B501C2BCEC81B0049F0AF /* SessionIdStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionIdStruct.swift; sourceTree = "<group>"; };
 		630B50222BCFD81C0049F0AF /* ReturnUserDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnUserDataStruct.swift; sourceTree = "<group>"; };
 		630B50242BD108160049F0AF /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		630B50282BD12C240049F0AF /* FavoritesStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesStruct.swift; sourceTree = "<group>"; };
+		630B502B2BD2D9C90049F0AF /* RequestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestClass.swift; sourceTree = "<group>"; };
+		630B502E2BD2DE710049F0AF /* RequestsParamsStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsParamsStructs.swift; sourceTree = "<group>"; };
 		63407A592BC6A8AE000CA505 /* TMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63407A5C2BC6A8AE000CA505 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63407A5E2BC6A8AE000CA505 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		63407A602BC6A8AE000CA505 /* GeneralPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPageViewController.swift; sourceTree = "<group>"; };
+		63407A602BC6A8AE000CA505 /* GenresPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresPageViewController.swift; sourceTree = "<group>"; };
 		63407A632BC6A8AE000CA505 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63407A652BC6A8AF000CA505 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63407A682BC6A8AF000CA505 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -155,6 +161,24 @@
 			path = SessionIdStruct;
 			sourceTree = "<group>";
 		};
+		630B50262BD12C100049F0AF /* FavoriteStructs */ = {
+			isa = PBXGroup;
+			children = (
+				630B50282BD12C240049F0AF /* FavoritesStruct.swift */,
+			);
+			path = FavoriteStructs;
+			sourceTree = "<group>";
+		};
+		630B502D2BD2DE3F0049F0AF /* RequestGroup */ = {
+			isa = PBXGroup;
+			children = (
+				630B502B2BD2D9C90049F0AF /* RequestClass.swift */,
+				63B375282BC8496E005AAEC3 /* RequestsStaticClass.swift */,
+				630B502E2BD2DE710049F0AF /* RequestsParamsStructs.swift */,
+			);
+			path = RequestGroup;
+			sourceTree = "<group>";
+		};
 		63407A502BC6A8AE000CA505 = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +236,7 @@
 		63430FD12BC9A5E300537367 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				63407A602BC6A8AE000CA505 /* GeneralPageViewController.swift */,
+				63407A602BC6A8AE000CA505 /* GenresPageViewController.swift */,
 				63430FD22BC9A8B400537367 /* FavoritesViewController.swift */,
 				63430FD42BC9A8D100537367 /* SearchViewController.swift */,
 				63430FD62BC9A8E500537367 /* AccountViewController.swift */,
@@ -234,9 +258,9 @@
 		63B375262BC8492C005AAEC3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				630B502D2BD2DE3F0049F0AF /* RequestGroup */,
 				63430FD12BC9A5E300537367 /* Views */,
 				63B375272BC84952005AAEC3 /* Structs */,
-				63B375282BC8496E005AAEC3 /* RequestsStaticClass.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -244,6 +268,7 @@
 		63B375272BC84952005AAEC3 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
+				630B50262BD12C100049F0AF /* FavoriteStructs */,
 				630B501B2BCEC80D0049F0AF /* SessionIdStruct */,
 				630B50172BCEC5580049F0AF /* RequestTokenStruct */,
 				630B500E2BCEC3C60049F0AF /* UserDataStruct */,
@@ -525,8 +550,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630B502F2BD2DE710049F0AF /* RequestsParamsStructs.swift in Sources */,
 				63430FDE2BCB022800537367 /* LoginViewController.swift in Sources */,
-				63407A612BC6A8AE000CA505 /* GeneralPageViewController.swift in Sources */,
+				63407A612BC6A8AE000CA505 /* GenresPageViewController.swift in Sources */,
 				630B50252BD108160049F0AF /* MainTabBarController.swift in Sources */,
 				63B3752C2BC84B55005AAEC3 /* Genres.swift in Sources */,
 				63430FD52BC9A8D100537367 /* SearchViewController.swift in Sources */,
@@ -539,9 +565,11 @@
 				63430FDA2BCAB8BF00537367 /* Movie.swift in Sources */,
 				63430FD32BC9A8B400537367 /* FavoritesViewController.swift in Sources */,
 				630B50192BCEC56A0049F0AF /* RequestTokenStruct.swift in Sources */,
+				630B502A2BD12C240049F0AF /* FavoritesStruct.swift in Sources */,
 				63B375292BC8496E005AAEC3 /* RequestsStaticClass.swift in Sources */,
 				63407A5F2BC6A8AE000CA505 /* SceneDelegate.swift in Sources */,
 				63B3752D2BC84B55005AAEC3 /* GenresListStruct.swift in Sources */,
+				630B502C2BD2D9C90049F0AF /* RequestClass.swift in Sources */,
 				630B501D2BCEC81B0049F0AF /* SessionIdStruct.swift in Sources */,
 				630B50162BCEC3FE0049F0AF /* Gravatar.swift in Sources */,
 				63430FD72BC9A8E500537367 /* AccountViewController.swift in Sources */,
@@ -727,6 +755,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 43JJRWSTM6;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TMDB/Info.plist;
@@ -758,6 +787,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 43JJRWSTM6;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TMDB/Info.plist;

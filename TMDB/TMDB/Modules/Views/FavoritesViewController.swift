@@ -12,6 +12,8 @@ class FavoritesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var userData: ReturnUserDataStruct
+    var requestResponce: FavoritesStruct = FavoritesStruct(page: 0, results: [], total_pages: 0, total_results: 0)
+    var movieList: Array<Movie> = []
     
     init(userData: ReturnUserDataStruct) {
         self.userData = userData
@@ -49,7 +51,18 @@ class FavoritesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print(userData)
+        var page: Int = 1
+        
+        RequestClass.request(adress: .GetFavoriteMovies, params: .GetFavoriteMoviesParam(.init(requestType: .get, sessionId: userData.session_id, sort_by: "created_at.asc", page: page, language: "en-US", account_id: userData.user_data.id))) { (responce: Result<FavoritesStruct, Error>) in
+            
+            switch responce {
+            case .success(let result):
+                self.requestResponce = result
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
         
     }
     
@@ -57,12 +70,25 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if (requestResponce.total_results == 0) {
+            return 1
+        } else {
+            return requestResponce.results.count
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.selectionStyle = .none
+        
+        if (requestResponce.total_results == 0) {
+            cell.textLabel?.textAlignment = .center
+            cell.textLabel?.textColor = .label
+            cell.textLabel?.text = "You dont have any favorite movie yet"
+        } else {
+            cell.textLabel?.textAlignment = .left
+            cell.textLabel?.text = requestResponce.results[indexPath.row].title
+        }
 //        cell.textLabel?.text = movieList[indexPath.row].title
         return cell
     }
