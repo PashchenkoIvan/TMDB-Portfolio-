@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FavoritesViewController: UIViewController {
     
@@ -38,7 +39,7 @@ class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
+//        tableView.dataSource = self
         
         if let savedData = UserDefaults.standard.object(forKey: "userData") as? Data {
             let decoder = JSONDecoder()
@@ -46,6 +47,8 @@ class FavoritesViewController: UIViewController {
                 self.userData = loadedData
             }
         }
+        
+        tableView.register(UINib(nibName: "FavoriteTableViewCell", bundle: nil), forCellReuseIdentifier: "FavoriteTableViewCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,11 +56,14 @@ class FavoritesViewController: UIViewController {
         
         var page: Int = 1
         
-        RequestClass.request(adress: .GetFavoriteMovies, params: .GetFavoriteMoviesParam(.init(requestType: .get, sessionId: userData.session_id, sort_by: "created_at.asc", page: page, language: "en-US", account_id: userData.user_data.id))) { (responce: Result<FavoritesStruct, Error>) in
+        RequestClass.request(address: .GetFavoriteMovies, params: .GetFavoriteMoviesParam(.init(requestType: .get, sessionId: userData.session_id, sort_by: "created_at.asc", page: page, language: "en-US", account_id: userData.user_data.id))) { (responce: Result<FavoritesStruct, Error>) in
             
             switch responce {
             case .success(let result):
                 self.requestResponce = result
+                self.movieList = result.results
+                self.tableView.reloadData()
+//                print(result)
                 
             case .failure(let error):
                 print(error)
@@ -69,7 +75,10 @@ class FavoritesViewController: UIViewController {
 }
 
 extension FavoritesViewController: UITableViewDataSource {
+    
+    //
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //
         if (requestResponce.total_results == 0) {
             return 1
         } else {
@@ -77,19 +86,35 @@ extension FavoritesViewController: UITableViewDataSource {
         }
     }
 
+    //
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.selectionStyle = .none
-        
-        if (requestResponce.total_results == 0) {
-            cell.textLabel?.textAlignment = .center
-            cell.textLabel?.textColor = .label
-            cell.textLabel?.text = "You dont have any favorite movie yet"
+        if requestResponce.total_results == 0 {
+            let emptyCell = UITableViewCell()
+            emptyCell.selectionStyle = .none
+            emptyCell.textLabel?.textAlignment = .center
+            emptyCell.textLabel?.textColor = .label
+            emptyCell.textLabel?.text = "You don`t have any favorites movie yet"
+            return emptyCell
         } else {
-            cell.textLabel?.textAlignment = .left
-            cell.textLabel?.text = requestResponce.results[indexPath.row].title
+            guard let customCell = tableView.dequeueReusableCell(withIdentifier: "FavoriteTableViewCell", for: indexPath) as? FavoriteTableViewCell else {
+                return UITableViewCell()
+            }
+            let movie = movieList[indexPath.row]
+            customCell.selectionStyle = .none
+            customCell.titleLabel.text = movie.title
+            print(movie.backdrop_path!)
+            if let backdropPath = movie.backdrop_path, !backdropPath.isEmpty {
+                
+                let url = URL(string: "https://image.tmdb.org/t/p/original\(movie.backdrop_path!)")
+                print(url)
+                customCell.favoriteImageView.kf.setImage(with: url)
+            } else {
+                // Установите изображение по умолчанию, если backdrop_path отсутствует или пуст
+                customCell.favoriteImageView.image = UIImage(named: "defaultImage")
+            }
+            return customCell
         }
-//        cell.textLabel?.text = movieList[indexPath.row].title
-        return cell
     }
+
+
 }

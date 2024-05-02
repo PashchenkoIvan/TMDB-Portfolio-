@@ -19,6 +19,9 @@
 		630B502A2BD12C240049F0AF /* FavoritesStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B50282BD12C240049F0AF /* FavoritesStruct.swift */; };
 		630B502C2BD2D9C90049F0AF /* RequestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B502B2BD2D9C90049F0AF /* RequestClass.swift */; };
 		630B502F2BD2DE710049F0AF /* RequestsParamsStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B502E2BD2DE710049F0AF /* RequestsParamsStructs.swift */; };
+		630C02002BE173B2009B47E3 /* MovieDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630C01FF2BE173B2009B47E3 /* MovieDataViewController.swift */; };
+		632C74BC2BDA52AA006614B2 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C74BB2BDA52AA006614B2 /* Cell.swift */; };
+		632C74BE2BDA6297006614B2 /* TrendingMovieStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632C74BD2BDA6297006614B2 /* TrendingMovieStruct.swift */; };
 		63407A5D2BC6A8AE000CA505 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63407A5C2BC6A8AE000CA505 /* AppDelegate.swift */; };
 		63407A5F2BC6A8AE000CA505 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63407A5E2BC6A8AE000CA505 /* SceneDelegate.swift */; };
 		63407A612BC6A8AE000CA505 /* GenresPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63407A602BC6A8AE000CA505 /* GenresPageViewController.swift */; };
@@ -35,6 +38,9 @@
 		63430FDA2BCAB8BF00537367 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63430FD82BCAB8BF00537367 /* Movie.swift */; };
 		63430FDB2BCAB8C000537367 /* MovieListResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63430FD92BCAB8BF00537367 /* MovieListResponce.swift */; };
 		63430FDE2BCB022800537367 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63430FDD2BCB022800537367 /* LoginViewController.swift */; };
+		637342BC2BE2D60000365FCA /* AddFavoriteMovieStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637342BB2BE2D60000365FCA /* AddFavoriteMovieStruct.swift */; };
+		63A4A82B2BE38D3800ED9244 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A4A8292BE38D3800ED9244 /* FavoriteTableViewCell.swift */; };
+		63A4A82C2BE38D3800ED9244 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A4A82A2BE38D3800ED9244 /* FavoriteTableViewCell.xib */; };
 		63B375292BC8496E005AAEC3 /* RequestsStaticClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B375282BC8496E005AAEC3 /* RequestsStaticClass.swift */; };
 		63B3752C2BC84B55005AAEC3 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3752A2BC84B55005AAEC3 /* Genres.swift */; };
 		63B3752D2BC84B55005AAEC3 /* GenresListStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B3752B2BC84B55005AAEC3 /* GenresListStruct.swift */; };
@@ -74,6 +80,9 @@
 		630B50282BD12C240049F0AF /* FavoritesStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesStruct.swift; sourceTree = "<group>"; };
 		630B502B2BD2D9C90049F0AF /* RequestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestClass.swift; sourceTree = "<group>"; };
 		630B502E2BD2DE710049F0AF /* RequestsParamsStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsParamsStructs.swift; sourceTree = "<group>"; };
+		630C01FF2BE173B2009B47E3 /* MovieDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataViewController.swift; sourceTree = "<group>"; };
+		632C74BB2BDA52AA006614B2 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		632C74BD2BDA6297006614B2 /* TrendingMovieStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieStruct.swift; sourceTree = "<group>"; };
 		63407A592BC6A8AE000CA505 /* TMDB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63407A5C2BC6A8AE000CA505 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63407A5E2BC6A8AE000CA505 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +103,9 @@
 		63430FD82BCAB8BF00537367 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		63430FD92BCAB8BF00537367 /* MovieListResponce.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListResponce.swift; sourceTree = "<group>"; };
 		63430FDD2BCB022800537367 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		637342BB2BE2D60000365FCA /* AddFavoriteMovieStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteMovieStruct.swift; sourceTree = "<group>"; };
+		63A4A8292BE38D3800ED9244 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		63A4A82A2BE38D3800ED9244 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		63B375282BC8496E005AAEC3 /* RequestsStaticClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsStaticClass.swift; sourceTree = "<group>"; };
 		63B3752A2BC84B55005AAEC3 /* Genres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 		63B3752B2BC84B55005AAEC3 /* GenresListStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenresListStruct.swift; sourceTree = "<group>"; };
@@ -242,6 +254,8 @@
 				63430FD62BC9A8E500537367 /* AccountViewController.swift */,
 				63430FDD2BCB022800537367 /* LoginViewController.swift */,
 				630B50242BD108160049F0AF /* MainTabBarController.swift */,
+				632C74BB2BDA52AA006614B2 /* Cell.swift */,
+				630C01FF2BE173B2009B47E3 /* MovieDataViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,9 +269,27 @@
 			path = MovieListStructs;
 			sourceTree = "<group>";
 		};
+		637342BA2BE2D5E700365FCA /* AddFavoriteMovie */ = {
+			isa = PBXGroup;
+			children = (
+				637342BB2BE2D60000365FCA /* AddFavoriteMovieStruct.swift */,
+			);
+			path = AddFavoriteMovie;
+			sourceTree = "<group>";
+		};
+		63A4A8262BE38CCB00ED9244 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				63A4A8292BE38D3800ED9244 /* FavoriteTableViewCell.swift */,
+				63A4A82A2BE38D3800ED9244 /* FavoriteTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		63B375262BC8492C005AAEC3 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				63A4A8262BE38CCB00ED9244 /* Cells */,
 				630B502D2BD2DE3F0049F0AF /* RequestGroup */,
 				63430FD12BC9A5E300537367 /* Views */,
 				63B375272BC84952005AAEC3 /* Structs */,
@@ -268,12 +300,14 @@
 		63B375272BC84952005AAEC3 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
+				637342BA2BE2D5E700365FCA /* AddFavoriteMovie */,
 				630B50262BD12C100049F0AF /* FavoriteStructs */,
 				630B501B2BCEC80D0049F0AF /* SessionIdStruct */,
 				630B50172BCEC5580049F0AF /* RequestTokenStruct */,
 				630B500E2BCEC3C60049F0AF /* UserDataStruct */,
 				63430FDC2BCAB8CB00537367 /* MovieListStructs */,
 				63B3752E2BC84BAD005AAEC3 /* GenresListStruct */,
+				632C74BD2BDA6297006614B2 /* TrendingMovieStruct.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -421,6 +455,7 @@
 			files = (
 				63407A662BC6A8AF000CA505 /* Assets.xcassets in Resources */,
 				63407A692BC6A8AF000CA505 /* Base in Resources */,
+				63A4A82C2BE38D3800ED9244 /* FavoriteTableViewCell.xib in Resources */,
 				63407A8D2BC6B0B2000CA505 /* Podfile in Resources */,
 				63407A642BC6A8AE000CA505 /* Base in Resources */,
 			);
@@ -555,6 +590,9 @@
 				63407A612BC6A8AE000CA505 /* GenresPageViewController.swift in Sources */,
 				630B50252BD108160049F0AF /* MainTabBarController.swift in Sources */,
 				63B3752C2BC84B55005AAEC3 /* Genres.swift in Sources */,
+				63A4A82B2BE38D3800ED9244 /* FavoriteTableViewCell.swift in Sources */,
+				632C74BC2BDA52AA006614B2 /* Cell.swift in Sources */,
+				632C74BE2BDA6297006614B2 /* TrendingMovieStruct.swift in Sources */,
 				63430FD52BC9A8D100537367 /* SearchViewController.swift in Sources */,
 				630B50132BCEC3FE0049F0AF /* Avatar.swift in Sources */,
 				630B50152BCEC3FE0049F0AF /* UserDataStruct.swift in Sources */,
@@ -568,9 +606,11 @@
 				630B502A2BD12C240049F0AF /* FavoritesStruct.swift in Sources */,
 				63B375292BC8496E005AAEC3 /* RequestsStaticClass.swift in Sources */,
 				63407A5F2BC6A8AE000CA505 /* SceneDelegate.swift in Sources */,
+				637342BC2BE2D60000365FCA /* AddFavoriteMovieStruct.swift in Sources */,
 				63B3752D2BC84B55005AAEC3 /* GenresListStruct.swift in Sources */,
 				630B502C2BD2D9C90049F0AF /* RequestClass.swift in Sources */,
 				630B501D2BCEC81B0049F0AF /* SessionIdStruct.swift in Sources */,
+				630C02002BE173B2009B47E3 /* MovieDataViewController.swift in Sources */,
 				630B50162BCEC3FE0049F0AF /* Gravatar.swift in Sources */,
 				63430FD72BC9A8E500537367 /* AccountViewController.swift in Sources */,
 			);
@@ -761,7 +801,7 @@
 				INFOPLIST_FILE = TMDB/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -793,7 +833,7 @@
 				INFOPLIST_FILE = TMDB/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.medical";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
