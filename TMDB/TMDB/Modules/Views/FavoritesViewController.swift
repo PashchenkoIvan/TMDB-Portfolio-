@@ -96,25 +96,45 @@ extension FavoritesViewController: UITableViewDataSource {
             emptyCell.textLabel?.text = "You don`t have any favorites movie yet"
             return emptyCell
         } else {
-            guard let customCell = tableView.dequeueReusableCell(withIdentifier: "FavoriteTableViewCell", for: indexPath) as? FavoriteTableViewCell else {
-                return UITableViewCell()
-            }
-            let movie = movieList[indexPath.row]
-            customCell.selectionStyle = .none
-            customCell.titleLabel.text = movie.title
-            print(movie.backdrop_path!)
-            if let backdropPath = movie.backdrop_path, !backdropPath.isEmpty {
-                
-                let url = URL(string: "https://image.tmdb.org/t/p/original\(movie.backdrop_path!)")
-                print(url)
-                customCell.favoriteImageView.kf.setImage(with: url)
-            } else {
-                // Установите изображение по умолчанию, если backdrop_path отсутствует или пуст
-                customCell.favoriteImageView.image = UIImage(named: "defaultImage")
-            }
-            return customCell
+            let cell = UITableViewCell()
+            cell.textLabel?.text = movieList[indexPath.row].title
+            cell.selectionStyle = .none
+//            guard let customCell = tableView.dequeueReusableCell(withIdentifier: "FavoriteTableViewCell", for: indexPath) as? FavoriteTableViewCell else {
+//                print("Error with creating cell")
+//                return UITableViewCell()
+//            }
+//            let movie = movieList[indexPath.row]
+//            customCell.selectionStyle = .none
+//            customCell.titleLabel.text = movie.title
+//            print(movie.backdrop_path!)
+//            if let backdropPath = movie.backdrop_path, !backdropPath.isEmpty {
+//                let url = URL(string: "https://image.tmdb.org/t/p/original\(movie.backdrop_path!)")
+//                customCell.favoriteImageView.kf.setImage(with: url)
+//            } else {
+//                // Установите изображение по умолчанию, если backdrop_path отсутствует или пуст
+//                customCell.favoriteImageView.image = UIImage(named: "defaultImage")
+//            }
+//            return customCell
+            return cell
         }
     }
 
 
+}
+
+extension FavoritesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = movieList[indexPath.row]
+        
+        let movieStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        if let viewController = movieStoryBoard.instantiateViewController(withIdentifier: "MovieDataViewController") as? MovieDataViewController {
+            viewController.userData = userData
+            viewController.movieData = movieList[indexPath.row]
+            navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 }
