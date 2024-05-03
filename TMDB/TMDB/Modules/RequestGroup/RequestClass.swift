@@ -73,27 +73,27 @@ class RequestClass {
             url = "\(defaultUrl)\(address.rawValue)?api_key=\(self.apiKey)&request_token=\(param.requestToken)"
             method = param.requestType
             
-        //
+        //Retrieving user information using session ID
         case .GetUserInfoParam(let param):
             url = "\(defaultUrl)\(address.rawValue)?api_key=\(self.apiKey)&session_id=\(param.sessionId)"
             method = param.requestType
             
-        //
+        //Fetching a user's favorite movies list with pagination and sorting options
         case .GetFavoriteMoviesParam(let param):
             url = "\(defaultUrl)\(address.rawValue)/\(param.account_id)/favorite/movies?api_key=\(self.apiKey)&language=\(param.language)&page=\(param.page)&sort_by=\(param.sort_by)&session_id=\(param.sessionId)"
             method = param.requestType
             
-        //
+        //Getting trending movies based on language preference
         case .GetTrendMovies(let param):
             url = "\(defaultUrl)\(address.rawValue)?api_key=\(self.apiKey)&language=\(param.language)"
             method = param.requestType
             
-        //
+        //Adding or removing a movie from the user's favorites list
         case .AddFavoriteMovie(let param):
             url = "\(defaultUrl)\(address.rawValue)\(param.account_id)/favorite?api_key=\(self.apiKey)&media_type=\(param.media_type)&media_id=\(param.media_id)&favorite=\(param.favorite)&session_id=\(param.session_id)"
             method = param.requestType
             
-        //
+        //Searching for movies using a query string
         case .searchMovie(let param):
             url = "\(defaultUrl)\(address.rawValue)?api_key=\(self.apiKey)&query=\(param.query)"
             method = param.requestType
