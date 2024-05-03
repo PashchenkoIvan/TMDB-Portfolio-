@@ -60,3 +60,8 @@ struct AddMovieParams {
     let media_id: Int
     let favorite: Bool
 }
+
+struct SearchMovieParams {
+    let requestType: Alamofire.HTTPMethod
+    let query: String
+}

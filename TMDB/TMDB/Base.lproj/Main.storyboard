@@ -21,7 +21,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="4nA-iO-4oV" kind="relationship" relationship="viewControllers" id="Qfp-Ko-jLN"/>
-                        <segue destination="mVu-4A-kkS" kind="relationship" relationship="viewControllers" id="Wx5-fg-OE6"/>
+                        <segue destination="Z0R-Ob-tGA" kind="relationship" relationship="viewControllers" id="Wx5-fg-OE6"/>
                         <segue destination="yeD-4W-OJ4" kind="relationship" relationship="viewControllers" id="76B-Hz-cWz"/>
                     </connections>
                 </tabBarController>
@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="-1213" y="718"/>
         </scene>
-        <!--Genres Page View Controller-->
+        <!--General-->
         <scene sceneID="I7R-3F-W0J">
             <objects>
                 <viewController storyboardIdentifier="GenresPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2qn-55-Qqx" customClass="GenresPageViewController" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
@@ -197,7 +197,7 @@
                             <constraint firstItem="PZN-6d-A8J" firstAttribute="leading" secondItem="OtJ-VZ-xea" secondAttribute="leading" id="zBl-qk-aCs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IAe-kb-L9x"/>
+                    <navigationItem key="navigationItem" title="General" id="IAe-kb-L9x"/>
                     <size key="freeformSize" width="393" height="1200"/>
                     <connections>
                         <outlet property="collectionView" destination="Gmd-RT-N7X" id="uHA-SD-HLj"/>
@@ -207,7 +207,7 @@
             </objects>
             <point key="canvasLocation" x="710.68702290076328" y="-142.25352112676057"/>
         </scene>
-        <!--Favorites View Controller-->
+        <!--Favorites-->
         <scene sceneID="Du4-bk-oxp">
             <objects>
                 <viewController storyboardIdentifier="FavoritesViewController" id="EQP-3d-K2N" customClass="FavoritesViewController" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
@@ -233,7 +233,7 @@
                             <constraint firstItem="IBn-Ox-Xvx" firstAttribute="leading" secondItem="Jsm-Xv-RxK" secondAttribute="leading" id="qe6-l4-tkJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vyt-4y-1Wv"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="vyt-4y-1Wv"/>
                     <connections>
                         <outlet property="tableView" destination="IBn-Ox-Xvx" id="LAp-fG-CUX"/>
                     </connections>
@@ -360,38 +360,54 @@
             </objects>
             <point key="canvasLocation" x="1878.6259541984732" y="-142.25352112676057"/>
         </scene>
-        <!--View Controller-->
+        <!--Search movie-->
         <scene sceneID="cGy-vO-JJn">
             <objects>
-                <viewController id="mVu-4A-kkS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="mVu-4A-kkS" customClass="SearchViewController" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dcy-jR-XPz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Search movie or TV" translatesAutoresizingMaskIntoConstraints="NO" id="Z6y-KK-NKR">
-                                <rect key="frame" x="0.0" y="59" width="393" height="30"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-Zv-cLi">
+                                <rect key="frame" x="10" y="103" width="373" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="E6p-2B-Wnc"/>
+                                    <constraint firstAttribute="height" constant="30" id="CzT-Fd-Yo7"/>
                                 </constraints>
-                                <textInputTraits key="textInputTraits" textContentType="organization"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="mVu-4A-kkS" id="J9k-0h-iw9"/>
+                                    <outlet property="delegate" destination="mVu-4A-kkS" id="heA-ro-tgm"/>
                                 </connections>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZuX-14-D0U">
+                                <rect key="frame" x="0.0" y="153" width="393" height="616"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mVu-4A-kkS" id="y3G-pO-CPN"/>
+                                    <outlet property="delegate" destination="mVu-4A-kkS" id="Qhx-Y9-h5V"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hBP-YA-k9D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Z6y-KK-NKR" firstAttribute="trailing" secondItem="hBP-YA-k9D" secondAttribute="trailing" id="21v-6I-ux6"/>
-                            <constraint firstItem="Z6y-KK-NKR" firstAttribute="leading" secondItem="hBP-YA-k9D" secondAttribute="leading" id="CN0-Tj-b9R"/>
-                            <constraint firstItem="Z6y-KK-NKR" firstAttribute="top" secondItem="hBP-YA-k9D" secondAttribute="top" id="tfm-JA-7Tg"/>
+                            <constraint firstItem="ZuX-14-D0U" firstAttribute="top" secondItem="aG7-Zv-cLi" secondAttribute="bottom" constant="20" id="3gq-tT-0VS"/>
+                            <constraint firstAttribute="trailing" secondItem="aG7-Zv-cLi" secondAttribute="trailing" constant="10" id="Knn-Yh-Ahy"/>
+                            <constraint firstItem="aG7-Zv-cLi" firstAttribute="top" secondItem="hBP-YA-k9D" secondAttribute="top" id="QzX-ug-L1x"/>
+                            <constraint firstItem="ZuX-14-D0U" firstAttribute="leading" secondItem="hBP-YA-k9D" secondAttribute="leading" id="SP4-zU-J42"/>
+                            <constraint firstItem="hBP-YA-k9D" firstAttribute="trailing" secondItem="ZuX-14-D0U" secondAttribute="trailing" id="hjc-el-5BR"/>
+                            <constraint firstItem="aG7-Zv-cLi" firstAttribute="leading" secondItem="hBP-YA-k9D" secondAttribute="leading" constant="10" id="p7c-TY-gzh"/>
+                            <constraint firstItem="hBP-YA-k9D" firstAttribute="bottom" secondItem="ZuX-14-D0U" secondAttribute="bottom" id="qBm-1B-AHc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="ah5-lb-V60"/>
+                    <navigationItem key="navigationItem" title="Search movie" id="fYS-QS-kNG"/>
+                    <connections>
+                        <outlet property="searchBar" destination="aG7-Zv-cLi" id="ker-Vp-2d1"/>
+                        <outlet property="tableView" destination="ZuX-14-D0U" id="Ipa-R4-wrX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dim-HQ-rIf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-193" y="1428"/>
+            <point key="canvasLocation" x="733.58778625954199" y="1427.4647887323945"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="ntQ-qh-MuQ">
@@ -531,6 +547,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q3m-Md-e4U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-193.12977099236642" y="717.6056338028169"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gql-U8-9dx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Z0R-Ob-tGA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="ah5-lb-V60"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fZQ-0i-n25">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mVu-4A-kkS" kind="relationship" relationship="rootViewController" id="aeW-pI-Eyx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iTW-NE-n9e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-193.12977099236642" y="1427.4647887323945"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="systemPinkColor"/>

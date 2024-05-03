@@ -19,6 +19,7 @@ enum Address: String {
     case GetUserInfo = "account"
     case GetFavoriteMovies = "account/"
     case GetTrendMovies = "trending/movie/week"
+    case searchMovie = "search/movie"
 }
 
 //Data type for selecting the type of request input parameters
@@ -32,6 +33,7 @@ enum Params {
     case GetFavoriteMoviesParam(GetFavoritesParams)
     case GetTrendMovies(GetMoviesTrendparams)
     case AddFavoriteMovie(AddMovieParams)
+    case searchMovie(SearchMovieParams)
 }
 
 class RequestClass {
@@ -90,7 +92,11 @@ class RequestClass {
         case .AddFavoriteMovie(let param):
             url = "\(defaultUrl)\(address.rawValue)\(param.account_id)/favorite?api_key=\(self.apiKey)&media_type=\(param.media_type)&media_id=\(param.media_id)&favorite=\(param.favorite)&session_id=\(param.session_id)"
             method = param.requestType
-            print(url)
+            
+        //
+        case .searchMovie(let param):
+            url = "\(defaultUrl)\(address.rawValue)?api_key=\(self.apiKey)&query=\(param.query)"
+            method = param.requestType
         }
         
         //
