@@ -18,6 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="AccentColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemPinkColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="4nA-iO-4oV" kind="relationship" relationship="viewControllers" id="Qfp-Ko-jLN"/>
@@ -360,7 +361,7 @@
             </objects>
             <point key="canvasLocation" x="1878.6259541984732" y="-142.25352112676057"/>
         </scene>
-        <!--Search movie-->
+        <!--Search-->
         <scene sceneID="cGy-vO-JJn">
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="mVu-4A-kkS" customClass="SearchViewController" customModule="TMDB" customModuleProvider="target" sceneMemberID="viewController">
@@ -368,7 +369,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-Zv-cLi">
+                            <searchBar contentMode="redraw" placeholder="Search movie" translatesAutoresizingMaskIntoConstraints="NO" id="aG7-Zv-cLi">
                                 <rect key="frame" x="10" y="103" width="373" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="CzT-Fd-Yo7"/>
@@ -399,7 +400,7 @@
                             <constraint firstItem="hBP-YA-k9D" firstAttribute="bottom" secondItem="ZuX-14-D0U" secondAttribute="bottom" id="qBm-1B-AHc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Search movie" id="fYS-QS-kNG"/>
+                    <navigationItem key="navigationItem" title="Search" id="fYS-QS-kNG"/>
                     <connections>
                         <outlet property="searchBar" destination="aG7-Zv-cLi" id="ker-Vp-2d1"/>
                         <outlet property="tableView" destination="ZuX-14-D0U" id="Ipa-R4-wrX"/>

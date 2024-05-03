@@ -92,6 +92,8 @@ extension SearchViewController: UITableViewDelegate {
         if resultData.count != 0 {
             let movie = resultData[indexPath.row]
             
+            print(movie)
+            
             let movieStoryBoard = UIStoryboard(name: "Main", bundle: nil)
             if let viewController = movieStoryBoard.instantiateViewController(withIdentifier: "MovieDataViewController") as? MovieDataViewController {
                 viewController.userData = userData

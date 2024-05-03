@@ -64,7 +64,15 @@ class MovieDataViewController: UIViewController {
             return
         }
         
-        let url = URL(string: "https://image.tmdb.org/t/p/original\(movie.backdrop_path!)")
+        var url = URL(string: "")
+        if movie.backdrop_path == nil {
+            url = URL(string: "http://designingpupilintermediary.com/canuthkx?qlru=62&refer=https%3A%2F%2Fwww.peakpx.com%2Fen%2Fhd-wallpaper-desktop-vmpiw&kw=%5B%22technology%22%2C%22error%22%2C%22404%22%2C%22not%22%2C%22found%22%2C%22black%22%2C%22white%22%2C%22minimalist%22%2C%22hd%22%2C%22wallpaper%22%2C%22peakpx%22%5D&key=1001c8ae384bf3571ef4f7a804d4d9c9&scrWidth=1440&scrHeight=900&tz=3&v=24.5.6485&ship=&psid=www.peakpx.com,www.peakpx.com&sub3=invoke_layer&res=14.29&dev=r&uuid=e801db1e-8957-47ca-9e96-e11856d8a250%3A2%3A1")
+        } else {
+            url = URL(string: "https://image.tmdb.org/t/p/original\(movie.backdrop_path!)")
+        }
+        
+        navigationController?.topViewController?.title = movie.title
+        
         imageView.kf.setImage(with: url)
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true

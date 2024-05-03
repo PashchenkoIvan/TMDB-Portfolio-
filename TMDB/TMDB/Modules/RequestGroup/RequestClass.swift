@@ -18,7 +18,7 @@ enum Address: String {
     case CreateSessionId = "authentication/session/new"
     case GetUserInfo = "account"
     case GetFavoriteMovies = "account/"
-    case GetTrendMovies = "trending/movie/week"
+    case GetTrendMovies = "trending/movie/day"
     case searchMovie = "search/movie"
 }
 
